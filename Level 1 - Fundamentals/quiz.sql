@@ -25,3 +25,16 @@ FROM Users u
 JOIN Videos v ON u.user_id = v.user_id;
 -- Using aliases u for Users and v for Videos makes the query more concise and easier to understand, especially when you have to refer to the 
 -- table multiple times in the query.
+
+-- 7. True or False: The WHERE clause is used to filter the results returned by a query.
+-- 8. How do you handle NULL values in a WHERE clause? Can you write a short example using a table named employees with a column named phone_number?
+SELECT employee_id
+FROM employees
+WHERE phone_number IS NULL;
+
+-- 9. Imagine you have a table named products with columns product_name and price. Write a SQL query that selects all products whose name starts 
+-- with 'A' and whose price is greater than 20.
+SELECT product_name
+FROM products
+WHERE product_name LIKE 'A%'
+    AND price > 20;

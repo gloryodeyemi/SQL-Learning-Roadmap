@@ -71,3 +71,5 @@ FROM orders;
 -- Column aliases cannot be used in the WHERE clause because the WHERE clause is processed before the SELECT statement where the alias is defined. 
 -- Table aliases, on the other hand, can be used in the WHERE clause because the FROM clause (where table aliases are defined) is processed before 
 -- the WHERE clause.
+
+-- LIMIT Clause

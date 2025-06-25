@@ -73,3 +73,30 @@ FROM orders;
 -- the WHERE clause.
 
 -- LIMIT Clause
+
+-- 16. True or False: The LIMIT clause is used to restrict the number of rows returned by a query. Explain your reasoning.
+-- The LIMIT clause does indeed restrict the number of rows returned by a query, which helps with both readability and performance, especially on 
+-- large tables.
+
+-- 17. Imagine you have a table named products with columns id and name. Write a SQL query that retrieves the top 5 products from the products 
+-- table.
+SELECT id, name
+FROM products
+ORDER BY id ASC
+LIMIT 5;
+
+-- 18. Fill in the blank: The _______ clause is used with LIMIT to skip a certain number of rows before starting to return rows.
+-- OFFSET
+
+/*
+19. You are working with a very large table in TokTuk, and you need to retrieve data for a specific page in a user feed. Which of the following is 
+the MOST important reason to use LIMIT in this scenario?
+
+A) To make the query easier to read.
+
+B) To improve query performance by reducing the amount of data processed.
+
+C) To ensure the data is sorted correctly.
+
+D) To avoid displaying duplicate rows.
+*/

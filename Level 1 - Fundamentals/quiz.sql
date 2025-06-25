@@ -1,4 +1,4 @@
--- Quiz
+-- SELECT statement
 -- 1. True or False: Using SELECT * in production code is generally a good practice because it ensures you retrieve all possible data from a table. 
 -- Explain why.
 
@@ -10,6 +10,8 @@ FROM videos;
 -- is it important to retrieve distinct values?
 SELECT DISTINCT customer_id
 FROM Orders;
+
+-- FROM clause
 
 -- 4. True or False: The FROM clause is optional in a SQL SELECT statement. Explain your reasoning.
 -- The FROM clause is essential because it tells the database from which table(s) to retrieve the data. Without it, the database wouldn't know 
@@ -26,6 +28,8 @@ JOIN Videos v ON u.user_id = v.user_id;
 -- Using aliases u for Users and v for Videos makes the query more concise and easier to understand, especially when you have to refer to the 
 -- table multiple times in the query.
 
+-- WHERE clause
+
 -- 7. True or False: The WHERE clause is used to filter the results returned by a query.
 -- 8. How do you handle NULL values in a WHERE clause? Can you write a short example using a table named employees with a column named phone_number?
 SELECT employee_id
@@ -38,3 +42,17 @@ SELECT product_name
 FROM products
 WHERE product_name LIKE 'A%'
     AND price > 20;
+
+-- ORDER BY clause
+
+-- 10. True or False: The ORDER BY clause is used to sort the rows in a result set. Explain your reasoning.
+-- 11. How would you sort a result set by a column named "creation_date" in descending order? Write the SQL code.
+SELECT *
+FROM table_name
+ORDER BY creation_date DESC;
+
+-- 12. Suppose you want to sort a table first by "category" in ascending order and then by "price" in descending order within each category. 
+-- How would you write the SQL query to achieve this? Explain the logic behind the ordering.
+SELECT *
+FROM table_name
+ORDER BY category ASC, price DESC;

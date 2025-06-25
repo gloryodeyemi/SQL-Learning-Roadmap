@@ -56,3 +56,18 @@ ORDER BY creation_date DESC;
 SELECT *
 FROM table_name
 ORDER BY category ASC, price DESC;
+
+-- AS Keyword (Aliasing)
+-- 13. True or False: The AS keyword is required when aliasing columns or tables in SQL. Explain your reasoning.
+-- While many databases don't strictly require the AS keyword, using it improves the clarity and readability of your SQL queries. It's a good 
+-- practice to adopt.
+
+-- 14. Write a SQL query that selects the customer_id and order_date from the orders table. Alias the customer_id column as CustomerID and the 
+-- order_date column as OrderDate.
+SELECT customer_id AS CustomerID, order_date AS OrderDate
+FROM orders;
+
+-- 15. Can you use column aliases in the WHERE clause? Explain why or why not.
+-- Column aliases cannot be used in the WHERE clause because the WHERE clause is processed before the SELECT statement where the alias is defined. 
+-- Table aliases, on the other hand, can be used in the WHERE clause because the FROM clause (where table aliases are defined) is processed before 
+-- the WHERE clause.

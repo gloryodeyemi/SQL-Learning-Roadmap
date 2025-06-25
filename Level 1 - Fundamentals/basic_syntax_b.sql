@@ -154,3 +154,5 @@ ORDER BY
 -- Case-insensitive sorting (implementation varies by database)
 SELECT username FROM Users
 ORDER BY LOWER(username) ASC;
+
+-- AS Keyword (Aliasing)

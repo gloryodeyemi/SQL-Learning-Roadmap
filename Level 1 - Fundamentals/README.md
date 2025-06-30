@@ -1,0 +1,13 @@
+# SQL Learning Roadmap
+
+## Table Schema
+```
+users
+(user_id: INTEGER, username: TEXT, email: TEXT, join_date: TEXT)
+
+videos
+(video_id: INTEGER, user_id: INTEGER, title: TEXT, upload_date: TEXT, views: INTEGER)
+
+interactions
+(interaction_id: INTEGER, user_id: INTEGER, video_id: INTEGER, interaction_type: TEXT, timestamp: TEXT, comment_text: TEXT)
+```

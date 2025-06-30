@@ -12,3 +12,5 @@ FROM products;
 SELECT product_id, COUNT(DISTINCT customer_id) AS unique_customers
 FROM sales
 GROUP BY product_id;
+
+-- AND Operator

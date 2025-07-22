@@ -1,5 +1,22 @@
 # SQL Learning Roadmap
 
+## Topics Covered
+### Level 1 - Fundamentals
+1. Basic SQL Syntax
+    * SELECT
+    * FROM
+    * WHERE
+    * ORDER BY
+    * AS
+    * LIMIT
+2. Data Cleaning
+    * DISTINCT
+    * AND
+    * OR
+3. Data Aggregations
+---
+
+---
 ## Table Schema
 ```
 users

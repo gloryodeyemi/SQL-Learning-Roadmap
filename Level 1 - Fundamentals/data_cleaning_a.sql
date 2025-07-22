@@ -166,3 +166,5 @@ WHERE
   user_id IN (SELECT user_id FROM Users WHERE username LIKE 'creator%')
 ORDER BY 
   views DESC;
+
+-- SQL OR Operator

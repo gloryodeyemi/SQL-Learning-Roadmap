@@ -298,3 +298,7 @@ ORDER BY
 -- OR vs. IN Operator
 -- When checking a column against multiple possible values, you can use either OR or the IN operator. The IN operator is generally more concise 
 -- and often performs better.
+
+-- SQL NOT Operator
+-- The NOT operator in SQL is used to negate a condition in a WHERE clause or HAVING clause. It reverses the result of the condition that follows 
+-- it, making TRUE conditions FALSE and FALSE conditions TRUE.

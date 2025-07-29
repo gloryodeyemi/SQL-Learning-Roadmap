@@ -1,0 +1,1 @@
+-- SQL LIKE Operator

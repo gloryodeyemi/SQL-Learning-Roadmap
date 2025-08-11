@@ -216,3 +216,9 @@ WHERE views BETWEEN 1000 AND 5000;
 
 -- Performance
 -- BETWEEN is typically optimized by databases and can use indexes effectively, similar to using >= and <= conditions.
+
+/*
+SQL IN Operator
+
+
+*/

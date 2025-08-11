@@ -180,3 +180,51 @@ WHERE CustomerID IN (
     FROM Customers
     WHERE Status = 'VIP'
 );
+
+/*
+SQL CASE WHEN Statement
+-----------------------
+
+Question 1
+----------
+True or False: The CASE WHEN expression in SQL is used to add conditional logic to your queries, similar to an if-then-else statement. 
+Explain your reasoning.
+
+Solution 1
+----------
+True. The CASE WHEN expression indeed functions like an if-then-else statement, allowing you to evaluate conditions and return different values 
+based on the results.
+
+Question 2
+----------
+Fill in the blank: In a simple CASE expression, you compare an expression to a set of ______ for equality.
+
+Solution 2
+----------
+In a simple CASE expression, you compare an expression to a set of values for equality.
+
+Question 3
+----------
+Which type of CASE expression is more suitable when you need to evaluate different expressions with different operators in each WHEN clause?
+
+a) Simple CASE expression b) Searched CASE expression
+
+Solution 3
+----------
+The searched CASE expression is indeed more suitable for evaluating different expressions with different operators in each WHEN clause. This is 
+because it allows you to specify a boolean condition for each WHEN clause, providing greater flexibility compared to the simple CASE expression, 
+which only checks for equality.
+
+Question 4
+----------
+Write a SQL query that uses a CASE WHEN statement in the SELECT clause to categorize videos based on their view counts. If a video has more than 10000 views, it should be labeled as 'Popular'. Otherwise, it should be labeled as 'Not Popular'. The table is called videos and has a column called views.
+
+Solution 4
+----------
+*/
+SELECT
+    views,
+    CASE 
+        WHEN views > 10000 THEN 'Popular' ELSE 'Not Popular' 
+    END AS 'video_category'
+FROM videos;

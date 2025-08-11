@@ -101,3 +101,38 @@ WHERE
 ORDER BY 
   views DESC;
 -- Translation: This query finds recent videos that are NOT (popular tutorials OR popular challenges OR very popular videos).
+
+/*
+QUIZ
+
+Question 1
+----------
+True or False: The NOT operator in SQL reverses the result of the condition that follows it, turning TRUE to FALSE and FALSE to TRUE. 
+Explain your reasoning.
+
+Question 2
+----------
+Suppose you want to find all customers who are NOT from the USA. Which of the following SQL snippets would be the most appropriate way to do this?
+a) WHERE country != 'USA' b) WHERE NOT country = 'USA' c) Both a and b are equally appropriate. d) WHERE country <> 'USA' e) a, b, and d are 
+all equally appropriate. Explain your reasoning.
+
+Solution
+--------
+e) a, b, and d are all equally appropriate because they produce the same result. However the choice of query to use depends on factors like 
+optimization, syntax, etc.
+
+!= and <> are common alternatives to NOT and are often considered more readable. While all three achieve the same result, readability and 
+database-specific optimizations can influence the best choice.
+
+Question 3
+----------
+Imagine you have a table named products with a column price. Write a SQL query that selects all products that are NOT NULL and have a price 
+greater than 100.
+
+Solution
+--------
+*/
+SELECT *
+FROM products
+WHERE price IS NOT NULL 
+    AND price > 100;

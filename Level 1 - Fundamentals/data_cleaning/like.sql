@@ -131,3 +131,35 @@ WHERE
 
 -- NOT LIKE for Exclusion
 -- Exclude rows that match a specific pattern.
+
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: The SQL LIKE operator is used for exact matching of text fields. Explain your reasoning.
+
+Solution 1
+----------
+The LIKE operator is indeed used for pattern matching, not exact matching. It allows you to search for strings that contain specific patterns, 
+using wildcards like % and _ to represent variable characters.
+
+Question 2
+----------
+Which wildcard in the SQL LIKE operator represents any single character? (a) % (b) _ (c) * (d) #
+
+Solution 2
+----------
+The underscore (_) wildcard represents any single character in the SQL LIKE operator.
+
+Question 3
+----------
+Write a SQL query that selects all records from a table named employees where the first_name field starts with "A". Explain how this query works.
+
+Solution 3
+----------
+*/
+SELECT *
+FROM employees
+WHERE UPPER(first_name) LIKE 'A%';

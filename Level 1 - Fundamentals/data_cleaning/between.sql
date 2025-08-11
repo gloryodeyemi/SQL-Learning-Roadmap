@@ -82,3 +82,37 @@ WHERE views BETWEEN 1000 AND 5000;
 
 -- Performance
 -- BETWEEN is typically optimized by databases and can use indexes effectively, similar to using >= and <= conditions.
+
+
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: The SQL BETWEEN operator includes both the start and end values in its range. Explain your reasoning.
+
+Solution 1
+----------
+True. The BETWEEN operator is inclusive except while using it in string because it compares full string.
+
+Question 2
+----------
+Fill in the blank:
+The BETWEEN operator is especially useful for filtering data within ____ ranges.
+
+Solution 2
+----------
+The BETWEEN operator is especially useful for filtering data within specified ranges. This encompasses numbers, dates, and even strings!
+
+Question 3
+----------
+Write a SQL query to select all products from a table named products where the price is between 50 and 100 (inclusive). The price column is 
+named price.
+
+Solution 3
+----------
+*/
+SELECT *
+FROM products
+WHERE price BETWEEN 50 AND 100;

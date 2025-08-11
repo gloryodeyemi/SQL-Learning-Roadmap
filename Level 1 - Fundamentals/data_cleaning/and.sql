@@ -127,3 +127,18 @@ WHERE
   user_id IN (SELECT user_id FROM Users WHERE username LIKE 'creator%')
 ORDER BY 
   views DESC;
+
+-- QUIZ
+-- 1. True or False: The SQL AND operator requires all conditions to be TRUE for a row to be included in the result. Explain your reasoning.
+-- The AND operator acts as a filter, ensuring that only rows satisfying all specified conditions are included in the result set. If even one 
+-- condition is FALSE, the entire expression evaluates to FALSE, and the row is excluded.
+
+-- 2. Imagine you have a table named products with columns price and in_stock. Write a SQL snippet that selects all products that cost more than 
+-- 20 dollars and are in stock.
+SELECT *
+FROM products
+WHERE price > 20 AND in_stock = TRUE;
+
+-- 3. How does the AND operator handle NULL values in SQL? Explain what happens when you combine TRUE AND NULL and FALSE AND NULL.
+-- When the AND operator encounters a TRUE and NULL, the result is NULL and when it encounters FALSE and NULL, the result is FALSE. Only rows 
+-- that are TRUE are returned.

@@ -129,3 +129,18 @@ ORDER BY
 -- OR vs. IN Operator
 -- When checking a column against multiple possible values, you can use either OR or the IN operator. The IN operator is generally more concise 
 -- and often performs better.
+
+-- QUIZ
+
+-- 1. True or False: The OR operator requires all conditions to be TRUE for a row to be included in the result. Explain your reasoning.
+-- False. The OR operator includes a row if at least one of the conditions is TRUE. If all conditions are FALSE, then the row is excluded.
+
+-- 2. Suppose you want to find all customers who live in either 'New York' or 'Los Angeles'. Write a simple SQL query using the OR operator to 
+-- achieve this, assuming your table is named Customers and the column containing city information is named City.
+SELECT *
+FROM Customers
+WHERE City = 'New York' OR City = 'Los Angeles';
+
+-- 3. Consider the following SQL expression: TRUE OR NULL. According to SQL's three-valued logic, what will this expression evaluate to? 
+-- Explain why.
+-- In SQL's three-valued logic, TRUE OR NULL evaluates to TRUE. The OR operator only needs one of the conditions to be TRUE to return TRUE.

@@ -3,7 +3,7 @@
 ## Topics Covered
 ### Level 1 - Fundamentals
 1. Basic SQL Syntax: `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `AS`, and `LIMIT`.
-2. Data Cleaning: `DISTINCT`, `AND`, `OR`, `NOT`, `LIKE`
+2. Data Cleaning: `DISTINCT`, `AND`, `OR`, `NOT`, `LIKE`, `BETWEEN`, `IN`, `CASE WHEN`, `COALESCE` and `CAST`.
 3. Data Aggregations
 ---
 

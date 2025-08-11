@@ -141,3 +141,42 @@ Solution 3
 SELECT *
 FROM products
 WHERE price BETWEEN 50 AND 100;
+
+/*
+IN Operator
+----------------
+
+Question 1
+----------
+True or False: The IN operator in SQL is used to check if a value matches at least one value in a specified list or subquery result. Explain your 
+reasoning.
+
+Solution 1
+----------
+True. The IN operator is designed to see if a value exists within a set of values provided in a list or returned by a subquery. It simplifies the 
+process of checking against multiple values.
+
+Question 2
+----------
+Suppose you want to retrieve all customers located in either 'New York', 'California', or 'Texas'. Write a SQL query using the IN operator to 
+achieve this, assuming you have a table named Customers with a column named Location.
+
+Question 3
+----------
+Imagine you have two tables: Orders and Customers. The Orders table has a CustomerID column, and the Customers table has a CustomerID and a Status 
+column. Write a SQL query using the IN operator with a subquery to find all orders placed by customers whose Status is 'VIP'.
+*/
+
+-- Solution 2
+SELECT *
+FROM Customers
+WHERE Location IN ('New York', 'California', 'Texas');
+
+-- Solution 3
+SELECT *
+FROM Orders
+WHERE CustomerID IN (
+    SELECT CustomerID
+    FROM Customers
+    WHERE Status = 'VIP'
+);

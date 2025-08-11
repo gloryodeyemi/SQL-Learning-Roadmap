@@ -131,3 +131,8 @@ WHERE
 
 -- NOT LIKE for Exclusion
 -- Exclude rows that match a specific pattern.
+
+/*
+SQL BETWEEN Operator
+
+*/

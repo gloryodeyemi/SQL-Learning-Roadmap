@@ -63,3 +63,36 @@ JOIN videos v ON u.user_id = v.user_id
 GROUP BY u.user_id, u.username
 HAVING AVG(v.views) > 5000
 ORDER BY average_views DESC;
+
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: The AVG function in SQL calculates the average of all values in a column, including NULL values. Explain your reasoning.
+
+Solution 1
+----------
+False. AVG ignores NULL values entirely. It sums the non-NULL values and divides by the count of the non-NULL values.
+
+Question 2
+----------
+Imagine you have a table named products with a column named price. Write a SQL query to calculate the average price of all products in the table.
+
+Question 3
+----------
+Suppose you have a table named sales with columns region and revenue. Write a SQL query that calculates the average revenue for each region. Also, only include regions where the average revenue is greater than 50000.
+*/
+
+-- Solution 2
+SELECT AVG(price) AS avg_price
+FROM products;
+
+-- Solution 3
+SELECT 
+    region,
+    AVG(revenue) AS avg_revenue
+FROM sales
+GROUP BY region
+    HAVING AVG(revenue) > 50000;

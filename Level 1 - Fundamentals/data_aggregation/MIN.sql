@@ -149,3 +149,43 @@ SELECT
     ELSE 'No Views'
   END AS view_category
 FROM Videos;
+
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: The MIN function in SQL can only be used with numeric data types.
+
+Solution 1
+----------
+False. MIN function is indeed versatile and can be used with numeric, date/time, and string data types. When used with strings, it returns the value that comes first alphabetically.
+
+Question 2
+----------
+Imagine you have a table named products with columns product_name and price. Write a SQL query that uses the MIN function to find the lowest price among all products.
+
+Question 3
+----------
+How does the MIN function handle NULL values when determining the minimum value in a column? Explain your reasoning.
+
+Solution 3
+----------
+The MIN function ignores NULL values when calculating the minimum. If all values in the specified column are NULL, then MIN will return NULL.
+
+Question 4
+----------
+You have a table named orders with columns order_id, customer_id, and order_date. You want to find the earliest order date for each customer. Write a SQL query to achieve this.
+*/
+
+-- Solution 2
+SELECT MIN(price)
+FROM products;
+
+-- Solution 4
+SELECT 
+    customer_id,
+    MIN(order_date) AS earliest_order_date
+FROM orders
+GROUP BY customer_id;

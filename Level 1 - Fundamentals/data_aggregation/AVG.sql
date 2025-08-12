@@ -96,4 +96,3 @@ SELECT
 FROM sales
 GROUP BY region
     HAVING AVG(revenue) > 50000;
-    

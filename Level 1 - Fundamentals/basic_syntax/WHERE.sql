@@ -1,42 +1,3 @@
--- SQL SELECT Statement
--- It retrieves specific columns of data from one or more tables in a database.
-
--- Example 1: Retrieve interaction information from the Interactions table
-SELECT 
-    interaction_id,
-    user_id,
-    video_id,
-    interaction_type,
-    timestamp
-FROM 
-    Interactions;
-
--- Example 2: Retrieve video information from the Videos table
-SELECT 
-    video_id,
-    title AS "Video Title",
-    views AS "View Count",
-    upload_date AS "Published On"
-FROM 
-    Videos;
-
--- FROM Clause
--- The FROM clause is a fundamental component of SQL SELECT statements that specifies which table(s) to retrieve data from. It defines the source 
--- of the data for your query.
-
--- Query data from the Users table
-SELECT user_id, username, email 
-FROM Users;
-
--- Using a table alias
-SELECT u.user_id, u.username, u.email 
-FROM Users AS u;
-
--- Simple join between Users and Videos
-SELECT u.username, v.title 
-FROM Users u
-JOIN Videos v ON u.user_id = v.user_id;
-
 -- WHERE Clause
 -- The WHERE clause is used in SQL to filter the results returned by a query. It allows you to specify conditions that rows must satisfy to be 
 -- included in the result set.
@@ -185,3 +146,18 @@ WHERE views > 1000
 SELECT * FROM Videos 
 WHERE views > 1000 
   AND category = 'Tutorial' OR category = 'Guide';
+
+-- QUIZ
+
+-- 1. True or False: The WHERE clause is used to filter the results returned by a query.
+-- 2. How do you handle NULL values in a WHERE clause? Can you write a short example using a table named employees with a column named phone_number?
+SELECT employee_id
+FROM employees
+WHERE phone_number IS NULL;
+
+-- 3. Imagine you have a table named products with columns product_name and price. Write a SQL query that selects all products whose name starts 
+-- with 'A' and whose price is greater than 20.
+SELECT product_name
+FROM products
+WHERE product_name LIKE 'A%'
+    AND price > 20;

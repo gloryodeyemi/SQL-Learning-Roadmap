@@ -102,3 +102,35 @@ FROM Videos
 GROUP BY user_id
 HAVING COUNT(*) > 3 -- Filter based on the result of COUNT()
 ORDER BY number_of_videos DESC;
+
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: The GROUP BY clause is used to group rows that have the same values in one or more columns into a summary row. Explain your reasoning.
+
+Solution 1
+----------
+True. The GROUP BY clause does indeed group rows with the same values in specified columns into a summary row, which is often used to create categories.
+
+Question 2
+----------
+Imagine you have a table named orders with columns customer_id and order_date. Write a SQL query that uses GROUP BY to find the number of orders placed by each customer.
+
+Question 3
+----------
+In a SQL query that includes WHERE, GROUP BY, and HAVING clauses, what is the order in which these clauses are processed?
+
+Solution 3
+----------
+FROM -> WHERE -> GROUP BY -> Aggregation -> HAVING
+*/
+
+-- Solution 2
+SELECT 
+    customer_id,
+    COUNT(order_date)
+FROM orders
+GROUP BY customer_id;

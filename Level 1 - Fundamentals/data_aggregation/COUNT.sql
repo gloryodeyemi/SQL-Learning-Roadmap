@@ -50,3 +50,32 @@ WHERE views > 1000
   AND SUBSTR(upload_date, 1, 4) = '2023'; -- Assuming YYYY-MM-DD format
 -- The CASE statement returns 1 (a non-NULL value) when the condition is met, and NULL otherwise. COUNT(expression) only counts the non-NULL results, giving us separate counts for each type.
 
+/*
+QUIZ
+----
+
+Question 1
+----------
+True or False: COUNT(*) counts all rows in a table, including rows with NULL values.
+
+Solution 1
+----------
+True. COUNT(*) counts all rows returned by the query, regardless of NULL values.
+
+Question 2
+----------
+What is the primary difference between using COUNT(column_name) and COUNT(*) in SQL? a) COUNT(column_name) counts all rows, including those with NULL values in the specified column. b) COUNT(column_name) counts only the rows where the specified column does not contain NULL values. c) COUNT(column_name) counts only the unique values in the specified column. d) There is no difference; both functions perform the same operation.
+
+Solution 2
+----------
+b) COUNT(column_name) counts only the rows where the specified column does not contain NULL values.
+
+Question 3
+----------
+Write a SQL query that counts the number of unique user IDs in a table named videos. The column containing user IDs is named user_id.
+
+Solution 3
+----------
+*/
+SELECT COUNT(DISTINCT user_id) AS unique_users
+FROM videos;
